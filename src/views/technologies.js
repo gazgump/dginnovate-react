@@ -21,7 +21,7 @@ export default function Technologies() {
 
   const listItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item) =>
 
-    <div className="technologies">
+    <div className="technologies" key={item.id}>
       {item.tag === "right" ?
       <div className="columns right">
       <div className="column is-full-mobile is-two-thirds-desktop">

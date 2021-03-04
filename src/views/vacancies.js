@@ -18,7 +18,7 @@ export default function Vacancies() {
   }, []);
 
   const listItems = data.map((item) =>
-  <div className="vacancy">
+  <div className="vacancy" key={item.id}>
     <h3 className="role">{ item.role }</h3>
     <p className="hours">{ item.hours }</p>
     <p className="manager">{ item.manager }</p>

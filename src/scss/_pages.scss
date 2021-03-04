@@ -95,5 +95,62 @@
   .article-image {
     margin-bottom: 2rem;
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+
+  }
+}
+
+.contact {
+  .contact-blurb {
+    margin-bottom: 2rem;
+  }
+  .contact-number {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .contact-form {
+    margin-top: 2rem;
+    input {
+      padding: 0.5rem 1rem;
+      width: 90%;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+    textarea {
+      height: 150px;
+      width: 90%;
+      padding: 1rem;
+    }
+    .message-chars-left {
+      font-size: 0.75rem;
+    }
+  }
+  .email-block {
+    position: relative;
+    border: 2px solid $black;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    h4 {
+      text-transform: uppercase;
+    }
+    .email-address {
+      display: flex;
+      align-items: center;
+      a {
+        color: $black;
+        font-size: 1.1rem;
+        margin-left: 0.5rem;
+        &:hover {
+          color: lighten($black, 30%);
+        }
+      }
+    }
+  }
+  .map {
+    margin-top: 2rem;
   }
 }

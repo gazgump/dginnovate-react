@@ -23,6 +23,11 @@ h1 {
   white-space: break-spaces;
 }
 
+div[role='alert'] {
+  color: red;
+  margin-top: 1em;
+}
+
 .icon {
   background-position: center;
   background-size: 100%;
@@ -39,6 +44,11 @@ h1 {
   &.icon-flask {
     background-image: url('../assets/images/flask.svg');
   }
+  &.icon-phone, &.icon-envelope {
+    padding: 0;
+    height: 17px;
+    display: inline-block;
+  }
 }
 
 .button {
@@ -48,5 +58,5 @@ h1 {
   background: $white;
   border-radius: 1.5rem;
   text-transform: uppercase;
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }

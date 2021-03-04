@@ -23,7 +23,7 @@ export default function News() {
   }, []);
 
   const listItems = data.sort((a, b) => a.date > b.date ? -1: 1).map((item) =>
-    <div className="column is-full-mobile is-half">
+    <div className="column is-full-mobile is-half" key={item.id}>
       <div className="news-article" key={item.id}>
         <a href={"/articles/" + item.id}>
           <div className="article-image">
