@@ -1,0 +1,52 @@
+h1 {
+  font-size: 42px!important;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  white-space: break-spaces;
+  flex-wrap: wrap;
+}
+
+.content {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  @media (max-width: 1023px) {
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+}
+
+.container {
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+
+.icon {
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  height: 55px;
+  line-height: 50;
+  &.icon-person {
+    background-image: url('../assets/images/person.svg');
+  }
+  &.icon-pound {
+    background-image: url('../assets/images/pound.svg');
+  }
+  &.icon-flask {
+    background-image: url('../assets/images/flask.svg');
+  }
+}
+
+.button {
+  padding: 0.5rem 2rem;
+  color: darken($primary-color, 20%);
+  border: 2px solid darken($primary-color, 20%);
+  background: $white;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  margin: 1rem 0; 
+}

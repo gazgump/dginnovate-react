@@ -1,0 +1,127 @@
+.studio-blurb {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  width: 80%;
+  line-height: 40px;
+  @media ( min-width: 1024px ) {
+    padding: 3rem 0 5rem;
+    font-size: 28px;
+    width: 60%;
+  }
+}
+
+.mission-blurb {
+  text-align: center;
+  background: url('../assets/images/Particles.png');
+  padding: 5rem 0;
+  span {
+    color: $white;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @media ( min-width: 1024px ) {
+      font-size: 28px;
+    }
+  }
+  h2 {
+    color: $white;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 0rem!important;
+    @media ( min-width: 1024px ) {
+      font-size: 85px;
+    }
+  }
+  p {
+    width: 80%;
+    color: $white;
+    font-size: 20px;
+    margin: 0 auto;
+    @media ( min-width: 1024px ) {
+      font-size: 25px;
+      width: 100%;
+    }
+  }
+}
+
+.partners-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  @media ( min-width: 1024px ) {
+    width: 80%;
+    padding: 3rem;
+  }
+  .partner-blurb {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+}
+
+.latest-news-section {
+  text-align: center;
+  background: url('../assets/images/panel-dots.jpg');
+  width: 100%;
+  height: auto;
+  padding: 2rem 1rem;
+  @media ( min-width: 1024px ) {
+    padding: 4rem 0;
+  }
+  .columns {
+    @media ( min-width: 1024px ) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  span {
+    color: $white;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @media ( min-width: 1024px ) {
+      font-size: 28px;
+    }
+  }
+  h2 {
+    color: $white;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 0rem!important;
+    margin-bottom: 1rem;
+    @media ( min-width: 1024px ) {
+      font-size: 85px;
+    }
+  }
+  .news-thumb {
+    padding: 0;
+    .news-image {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.bottom-text {
+  text-align: center;
+  padding: 2rem 0;
+  width: 90%;
+  margin: 0 auto;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  font-size: 1.2rem;
+  @media ( min-width: 1024px ) {
+    width: 60%;
+    padding: 5rem 0;
+  }
+}

@@ -1,0 +1,99 @@
+.facilities {
+  .hardware-section {
+    margin-top: 3rem;
+    white-space: normal;
+  }
+  .facilities-blurb {
+    margin-bottom: 2rem;
+  }
+}
+
+.technologies {
+  .columns {
+    margin: 3rem 0;
+  }
+  .tech-name {
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.policy {
+  h2 {
+    margin-bottom: 0!important;
+  }
+}
+
+.jobs {
+  .job-blurb {
+    margin: 2rem 0;
+    margin-bottom: 2rem!important;
+  }
+  .vacancy {
+    .info {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.partner {
+  padding: 5rem 0;
+  border-bottom: 2px solid $primary-color;
+  &:last-child {
+    border-bottom: none;
+  }
+  .partner-title {
+    margin-bottom: 2rem;
+  }
+  img {
+    @media (max-width: 767px) {
+      max-width: 300px;
+    }
+  }
+}
+
+.news-section {
+  margin: 3rem 0;
+  .news-article {
+    .article-image {
+      position: relative;
+      border-bottom: 4px solid darken($primary-color, 20%);
+      height: 254px;
+      @media (max-width: 1023px) {
+        height: 154px;
+      }
+      img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        @media (max-width: 1023px) {
+          height: 150px;
+        }
+      }
+      .article-date {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: darken($primary-color, 20%);
+        padding: 0.5rem;
+        color: $white;
+      }
+    }
+  }
+}
+
+.news-article {
+  .article-title {
+    width: 50%;
+    margin-bottom: 2rem;
+    @media (max-width: 1023px) {
+      width: 100%;
+      font-size: 28px!important;
+    }
+  }
+  .article-image {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}

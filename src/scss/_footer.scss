@@ -1,0 +1,43 @@
+.footer {
+  background: $black;
+  color: $white;
+  ul {
+    li {
+      list-style: disc;
+      @media (max-width: 1023px) {
+        list-style: none;
+      }
+      a {
+        color: $white;
+        &:hover {
+          color: darken($white, 30%);
+        }
+      }
+    }
+  }
+  .company-address {
+    margin-bottom: 2rem;
+  }
+  .company-number {
+    margin-bottom: 2rem;
+  }
+  .nav-list {
+    margin-top: 2rem;
+  }
+  .nav-item {
+    margin-bottom: 1.2rem;
+  }
+  .news-article {
+    margin-bottom: 1rem;
+  }
+  .latest-news {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $white;
+    font-weight: 900;
+  }
+  .copyright {
+    margin-top: 1rem;
+  }
+}

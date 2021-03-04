@@ -1,0 +1,38 @@
+.meet-the-team {
+  h2 {
+    font-size: 42px;
+    font-weight: 700;
+    width: 100%;
+    padding: 2rem 0;
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  ul {
+    list-style: none;
+    margin-left: 0;
+    li {
+      .team-member {
+        border-bottom: 2px solid $grey;
+        margin: 4rem 0;
+        .member-name {
+          font-size: 28px;
+          text-transform: uppercase;
+          margin-bottom: 0.3rem;
+        }
+        .member-role {
+          font-size: 1rem;
+        }
+        .member-blurb {
+          margin-bottom: 4rem;
+        }
+      }
+      &:last-child {
+        .team-member {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
