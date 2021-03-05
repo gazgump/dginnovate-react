@@ -9,6 +9,7 @@
       }
       a {
         color: $white;
+        display: block;
         &:hover {
           color: darken($white, 30%);
         }

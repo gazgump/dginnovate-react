@@ -34,8 +34,15 @@ export default function Home() {
 
   const thumbItems = newsData.sort((a, b) => a.date > b.date ? -1: 1).map((item) =>
     <div className="column is-full-mobile is-half is-one-quarter-desktop" key={item.id}>
-      <div className="news-thumb">
-        <a href={"/articles/" + item.id}><img className="news-image" src={item.image} /></a>
+      <div className="overlay-container">
+        <div className="news-thumb">
+          <a href={"/articles/" + item.id}><img className="news-image" src={item.image} /></a>
+        </div>
+        <div class="overlay">
+          <div class="text">{item.name}</div>
+          <a href={"/articles/" + item.id}><button className="button primary inverted">Read more</button></a>
+        </div>
+
       </div>
     </div>
   );
