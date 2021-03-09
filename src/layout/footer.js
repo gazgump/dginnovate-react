@@ -30,7 +30,7 @@ export default function Footer() {
 
   const newsItems = newsData.sort((a, b) => a.date > b.date ? -1: 1).map((item) =>
     <li className="news-article" key={item.id}>
-      <a href={"/articles/" + item.id}><p>{item.name}</p></a>
+      <a href={"/articles/" + item.slug}><p>{item.name}</p></a>
     </li>
   );
 

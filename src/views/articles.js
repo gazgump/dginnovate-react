@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import slugify from 'slugify';
 import {
   useParams,
   useHistory
@@ -36,25 +37,26 @@ export default function Articles() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://deregallera.herokuapp.com';
 
   let { id } = useParams();
 
-  console.log(id);
-
   useEffect(() => {
     axios
-      .get(`${url + "articles/" + id}`)
+      .get(`${url + "/articles?slug=" + id}`)
       .then(function(response) {
-        setData(response.data)
+        setData(response.data[0])
       })
       .catch(error => console.log(error));
 
   }, []);
 
+
   return (
+
     <div className="container">
       <FadeIn delay={200} duration={1400}>
+      { data ?
       <div className="news-article">
         <h1 className="article-title">{data.name}</h1>
         <Back/>
@@ -70,6 +72,7 @@ export default function Articles() {
           <WhatsappShareButton url={window.location.href}><WhatsappIcon></WhatsappIcon></WhatsappShareButton>
         </div>
       </div>
+      : 'loading' }
       </FadeIn>
     </div>
   );

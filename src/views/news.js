@@ -25,7 +25,7 @@ export default function News() {
   const listItems = data.sort((a, b) => a.date > b.date ? -1: 1).map((item) =>
     <div className="column is-full-mobile is-half" key={item.id}>
       <div className="news-article" key={item.id}>
-        <a href={"/articles/" + item.id}>
+        <a href={"/articles/" + item.slug}>
           <div className="article-image">
             <img src={item.image} />
             <span className="article-date">
@@ -35,7 +35,7 @@ export default function News() {
         </a>
         <h3 className="article-name">{ item.name }</h3>
         <div className="article-description" dangerouslySetInnerHTML={{__html: item.description.substring(0, 300) }}></div>
-        <a className="button primary" href={"/articles/" + item.id}>Continue Reading</a>
+        <a className="button primary" href={"/articles/" + item.slug}>Continue Reading</a>
       </div>
     </div>
   );

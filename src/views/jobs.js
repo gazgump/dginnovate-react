@@ -25,7 +25,7 @@ export default function Jobs() {
     <div className="container">
       <FadeIn delay={200} duration={1200}>
       <div className="jobs">
-        <h1>Deregallera Jobs</h1>
+        <h1>Join the team</h1>
         <img src={data.image} alt="jobs page image" />
         <p className="job-blurb">
           {data.blurb}

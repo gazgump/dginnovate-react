@@ -39,10 +39,18 @@ export default function Nav() {
       </div>
 
 
-      <div id="navbarMobile" className={ showMenu ? 'navbar-menu' : 'navbar-menu hidden'} >
+      <div id="navbarMobile" className='navbar-menu'>
         <div className="navbar-start">
           {listItems}
         </div>
+      </div>
+
+      <div className={ showMenu ? 'modal is-active' : 'modal'}>
+        <div className="modal-background"></div>
+        <div className="modal-content">
+          {listItems}
+        </div>
+        <button className="modal-close is-large" aria-label="close" onClick={() => setShowMenu(!showMenu)}></button>
       </div>
 
     </nav>

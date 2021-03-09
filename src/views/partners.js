@@ -19,7 +19,7 @@ export default function Partners() {
 
   }, []);
 
-  const listItems = data.map((item) =>
+  const listItems = data.sort((a, b) => a.id > b.id ? 1: -1).map((item) =>
     <div className="partner">
       <div className="columns">
         <div className="column is-full-mobile is-one-fifth">
@@ -38,7 +38,7 @@ export default function Partners() {
   return (
     <div className="container">
       <FadeIn delay={200} duration={1200}>
-      <h1>Deregallera Partners</h1>
+      <h1>Partners</h1>
       {listItems}
       </FadeIn>
     </div>
