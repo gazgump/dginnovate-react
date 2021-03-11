@@ -14,10 +14,28 @@
   }
 }
 
-.mission-blurb {
+.video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: url('../assets/images/Particles.png');
+  height: 400px;
+  video {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.mission-blurb {
+  position: absolute;
+  text-align: center;
   padding: 5rem 0;
+  top: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  left: 0;
   span {
     color: $white;
     font-size: 25px;

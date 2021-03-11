@@ -25,12 +25,12 @@
     }
     &:hover, &:focus {
       color: darken($white, 20%);
-      background: darken($primary-color, 10%);
+      background: darken($primary-color, 20%);
       @media ( min-width: 1024px ) {
         background: $black;
       }
       span {
-        background: darken($primary-color, 10%);
+        background: darken($primary-color, 20%);
         @media ( min-width: 1024px ) {
           background: darken($primary-color, 20%);
           border-radius: 1rem;

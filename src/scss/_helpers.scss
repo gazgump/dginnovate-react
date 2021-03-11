@@ -60,4 +60,9 @@ div[role='alert'] {
   border-radius: 1.5rem;
   text-transform: uppercase;
   margin: 1rem 0;
+  &:hover, &:focus {
+    background: darken($primary-color, 20%);
+    border: 2px solid darken($primary-color, 20%);
+    color: $white;
+  }
 }

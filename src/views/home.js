@@ -56,7 +56,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div dangerouslySetInnerHTML={{__html: data.mission }}></div>
+      <div className="video-container">
+        <video src="https://res.cloudinary.com/deregallera/video/upload/v1615479842/particles.mp4" poster="https://res.cloudinary.com/deregallera/image/upload/v1615480297/Particles-image.png" onloadedmetadata="this.muted = true" playsInline autoPlay muted loop></video>
+        <div dangerouslySetInnerHTML={{__html: data.mission }}></div>
+      </div>
+
     </FadeIn>
 
       <div className="container">
