@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import slugify from 'slugify';
+
 import {
   useParams,
   useHistory
@@ -61,7 +61,7 @@ export default function Articles() {
         <h1 className="article-title">{data.name}</h1>
         <Back/>
 
-        <img className="article-image" src={data.image} alt="article image"/>
+        <img className="article-image" src={data.image} alt={data.name}/>
 
         <div className="article-description" dangerouslySetInnerHTML={{__html: data.description }}></div>
         <div className="share-buttons">

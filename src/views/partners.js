@@ -7,7 +7,7 @@ export default function Partners() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios
@@ -23,7 +23,7 @@ export default function Partners() {
     <div className="partner">
       <div className="columns">
         <div className="column is-full-mobile is-one-fifth">
-          <img src={item.image} alt="partner image"/>
+          <img src={item.image} alt={ item.title }/>
         </div>
         <div className="column is-full-mobile is-four-fifths">
           <h3 className="partner-title">{ item.title }</h3>

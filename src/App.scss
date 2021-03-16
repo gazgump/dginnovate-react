@@ -3,6 +3,8 @@ $white: #ffffff;
 $primary-color: #8224e3;
 $grey: #acacac;
 
+@import '../node_modules/bulma';
+
 @import './scss/nav';
 @import './scss/header';
 @import './scss/homepage';

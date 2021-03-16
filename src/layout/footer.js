@@ -7,13 +7,14 @@ export default function Footer() {
   const [navData, setData] = useState([]);
   const [newsData, setNews] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
-
-  let one = `${url}navigations`;
-  let two = `${url}articles`;
-  let three = `${url}homepage`;
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
+
+    let one = `${url}navigations`;
+    let two = `${url}articles`;
+    let three = `${url}homepage`;
+
     const fetchData = async () => {
       const request1 = await axios(one);
       const request2 = await axios(two);
@@ -45,14 +46,14 @@ export default function Footer() {
       <div className="container">
         <div className="columns">
           <div className="column is-full-mobile is-one-third">
-            <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" width="175" height="28"/>
+            <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" alt="logo" width="175" height="28"/>
             <div className="company-address">
               {homeData.address}
             </div>
             <div className="company-number">
               {homeData.company}
             </div>
-            <img src={homeData.bsi}/>
+            <img src={homeData.bsi} alt={homeData.bsi}/>
             <p className="copyright">{homeData.copyright}</p>
           </div>
           <div className="column is-full-mobile is-one-third">

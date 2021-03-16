@@ -9,7 +9,7 @@ export default function Nav() {
   const [data, setData] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios
@@ -29,13 +29,13 @@ export default function Nav() {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
       <a className="navbar-item logo" href="/">
-        <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" width="175" height="28"/>
+        <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" alt="logo" width="175" height="28"/>
       </a>
-        <a role="button" onClick={() => setShowMenu(!showMenu)} className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMobile">
+        <button onClick={() => setShowMenu(!showMenu)} className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMobile">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
 
 

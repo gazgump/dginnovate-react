@@ -36,7 +36,7 @@ export default function Contact() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios
@@ -86,7 +86,7 @@ export default function Contact() {
               )}
               <textarea name='message' ref={register} placeholder='Message' maxLength='1500' aria-invalid={errors.message ? "true" : "false"} ref={register({ required: true })}/>
               <p className='message-chars-left'>Remaining Characters: {messageCharsLeft}</p>
-              
+
               <button type="submit" className="button primary" value='Send'>Send</button>
             </form>
             </div>
@@ -94,21 +94,21 @@ export default function Contact() {
               <div className="email-block">
                 <h4>General Enquiries Please Contact</h4>
                 <div className="email-address">
-                  <img className="icon icon-envelope" src="envelope.svg" alt="envelope icon"/>
+                  <img className="icon icon-envelope" src="envelope.svg" alt=""/>
                   <a href="mailto:general@deregallera.com" className="email-link">{data.general}</a>
                 </div>
               </div>
               <div className="email-block">
                 <h4>Press Enquiries Please Contact</h4>
                 <div className="email-address">
-                  <img className="icon icon-envelope" src="envelope.svg" alt="envelope icon"/>
+                  <img className="icon icon-envelope" src="envelope.svg" alt=""/>
                   <a href="mailto:press@deregallera.com" className="email-link">{data.press}</a>
                 </div>
               </div>
               <div className="email-block">
                 <h4>Investor Enquiries Please Contact</h4>
                 <div className="email-address">
-                  <img className="icon icon-envelope" src="envelope.svg" alt="envelope icon"/>
+                  <img className="icon icon-envelope" src="envelope.svg" alt=""/>
                   <a href="mailto:investor@deregallera.com" className="email-link">{data.investor}</a>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="map">
-          <iframe src={data.map} width="100%" height="450" allowFullScreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9915.649415438393!2d-3.2239862!3d51.5881697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5212e91481a5088d!2sDeregallera+Ltd!5e0!3m2!1sen!2suk!4v1562751645021!5m2!1sen!2suk" title="map" width="100%" height="450" allowFullScreen="" loading="lazy"></iframe>
         </div>
       </FadeIn>
       </div>

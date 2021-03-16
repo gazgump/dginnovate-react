@@ -1,13 +1,11 @@
 import React from "react";
 
-import bulma from 'bulma';
 import './App.scss';
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useParams
+  Route
 } from "react-router-dom";
 
 import Home from './views/home';

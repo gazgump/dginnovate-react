@@ -5,7 +5,7 @@ export default function Vacancies() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios
@@ -25,7 +25,7 @@ export default function Vacancies() {
     <div className="info">
       { item.info }
     </div>
-    <a href={item.link} target="_blank">Download the full job specification.</a>
+    <a href={item.link} target="_blank" rel="noreferrer">Download the full job specification.</a>
   </div>
   );
 

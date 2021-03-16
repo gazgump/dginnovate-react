@@ -8,7 +8,7 @@ export default function About() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios

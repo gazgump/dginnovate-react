@@ -7,7 +7,7 @@ export default function Privacy() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios
