@@ -49,7 +49,7 @@ export default function Articles() {
       })
       .catch(error => console.log(error));
 
-  }, []);
+  }, [id]);
 
 
   return (

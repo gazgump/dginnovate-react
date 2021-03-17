@@ -84,7 +84,7 @@ export default function Contact() {
               {errors.message && errors.message.type === "required" && (
                 <div role="alert">Message is required<br/></div>
               )}
-              <textarea name='message' ref={register} placeholder='Message' maxLength='1500' aria-invalid={errors.message ? "true" : "false"} ref={register({ required: true })}/>
+              <textarea name='message' placeholder='Message' maxLength='1500' aria-invalid={errors.message ? "true" : "false"} ref={register({ required: true })}/>
               <p className='message-chars-left'>Remaining Characters: {messageCharsLeft}</p>
 
               <button type="submit" className="button primary" value='Send'>Send</button>
