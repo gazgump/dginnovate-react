@@ -31,6 +31,7 @@
     margin-bottom: 2rem!important;
   }
   .vacancy {
+    margin-bottom: 2rem;
     .info {
       margin-bottom: 1rem;
     }
@@ -58,7 +59,7 @@
   .news-article {
     .article-image {
       position: relative;
-      border-bottom: 4px solid darken($primary-color, 20%);
+      border-bottom: 4px solid $primary-color;
       height: 254px;
       @media (max-width: 1023px) {
         height: 154px;
@@ -75,7 +76,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: darken($primary-color, 20%);
+        background: $primary-color;
         padding: 0.5rem;
         color: $white;
       }

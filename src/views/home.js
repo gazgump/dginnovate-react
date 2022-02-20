@@ -55,7 +55,7 @@ export default function Home() {
       </div>
 
       <div className="video-container">
-        <video src="https://res.cloudinary.com/deregallera/video/upload/v1615479842/particles.mp4" poster="https://res.cloudinary.com/deregallera/image/upload/v1615480297/Particles-image.png" playsInline autoPlay muted loop></video>
+        <video src="https://res.cloudinary.com/deregallera/video/upload/v1616767675/bgvideo.mp4" poster="https://res.cloudinary.com/deregallera/image/upload/v1615480297/Particles-image.png" playsInline autoPlay muted loop></video>
         <div dangerouslySetInnerHTML={{__html: data.mission }}></div>
       </div>
 
@@ -80,6 +80,7 @@ export default function Home() {
         </div>
       </div>
       <div className="latest-news-section">
+        <div className="overlay"></div>
         <div dangerouslySetInnerHTML={{__html: data.latest }}></div>
         <div className="columns">
           {thumbItems.slice(0, 4)}

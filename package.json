@@ -1,5 +1,5 @@
 {
-  "name": "deregallera-react",
+  "name": "dginnovate-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
     "isomorphic-unfetch": "^3.1.0",
+    "mmenu-light": "^3.1.0",
     "moment": "^2.29.1",
     "next-with-apollo": "^5.1.1",
     "node-sass": "^5.0.0",

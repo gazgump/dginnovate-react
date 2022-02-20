@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
+import {
+  Link
+} from "react-router-dom";
+
 export default function Footer() {
 
   const [homeData, setHome] = useState([]);
-  const [navData, setData] = useState([]);
-  const [newsData, setNews] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
 
-    let one = `${url}navigations`;
-    let two = `${url}articles`;
     let three = `${url}homepage`;
 
     const fetchData = async () => {
-      const request1 = await axios(one);
-      const request2 = await axios(two);
+
       const request3 = await axios(three);
 
-      setData(request1.data);
-      setNews(request2.data);
       setHome(request3.data);
     };
 
@@ -29,43 +26,34 @@ export default function Footer() {
 
   }, []);
 
-  const newsItems = newsData.sort((a, b) => a.date > b.date ? -1: 1).map((item) =>
-    <li className="news-article" key={item.id}>
-      <a href={"/articles/" + item.slug}><p>{item.name}</p></a>
-    </li>
-  );
-
-  const navItems = navData.map((item) =>
-    <li className="nav-item" key={item.id}>
-      <a href={'/' + item.slug}><p>{item.name}</p></a>
-    </li>
-  );
 
   return (
     <footer className="footer">
       <div className="container">
         <div className="columns">
+          <div className="column is-full">
+            <ul className="footer-nav">
+              <li><Link className="disclaimer footer-item" to='/disclaimer'><span>Disclaimer</span></Link></li>
+              <li><Link className="privacy footer-item" to='/privacy'><span>Privacy</span></Link></li>
+              <li><Link className="accessibility footer-item" to='/accessibility'><span>Accessibility</span></Link></li>
+              <li><Link className="terms footer-item" to='/terms'><span>Terms and Conditions</span></Link></li>
+              <li><Link className="sitemap footer-item" to='/sitemap'><span>Site Map</span></Link></li>
+            </ul>
+          </div>
           <div className="column is-full-mobile is-one-third">
-            <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" alt="logo" width="175" height="28"/>
+            <img src="https://res.cloudinary.com/deregallera/image/upload/v1616674670/dgi-logo.png" alt="logo" width="175" height="28"/>
             <div className="company-address">
               {homeData.address}
             </div>
+          </div>
+          <div className="column is-full-mobile is-one-third">
             <div className="company-number">
               {homeData.company}
             </div>
+          </div>
+          <div className="column is-full-mobile is-one-third">
             <img src={homeData.bsi} alt={homeData.bsi}/>
             <p className="copyright">{homeData.copyright}</p>
-          </div>
-          <div className="column is-full-mobile is-one-third">
-            <ul className="nav-list">
-              {navItems}
-            </ul>
-          </div>
-          <div className="column is-full-mobile is-one-third">
-            <h4 className="latest-news">Latest News</h4>
-            <ul>
-              {newsItems}
-            </ul>
           </div>
         </div>
       </div>

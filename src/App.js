@@ -10,6 +10,18 @@ import {
 
 import Home from './views/home';
 import About from './views/about';
+import Esg from './views/esg';
+import Overview from './views/overview';
+import History from './views/history';
+import SharePrice from './views/shareprice';
+import Reports from './views/reports';
+import Investors from './views/investors';
+import Disclaimer from './views/disclaimer';
+import Accessibility from './views/accessibility';
+import Terms from './views/terms';
+import SiteMap from './views/sitemap';
+import RegulatoryNews from './views/regulatorynews';
+import Advisers from './views/advisers';
 import Team from './views/team';
 import News from './views/news';
 import Facilities from './views/facilities';
@@ -77,6 +89,66 @@ export default function App() {
           <Route path="/jobs">
             <div className="content">
               <Jobs />
+            </div>
+          </Route>
+          <Route path="/esg">
+            <div className="content">
+              <Esg />
+            </div>
+          </Route>
+          <Route path="/overview">
+            <div className="content">
+              <Overview />
+            </div>
+          </Route>
+          <Route path="/history">
+            <div className="content">
+              <History />
+            </div>
+          </Route>
+          <Route path="/share-price">
+            <div className="content">
+              <SharePrice />
+            </div>
+          </Route>
+          <Route path="/reports-documents">
+            <div className="content">
+              <Reports />
+            </div>
+          </Route>
+          <Route path="/regulatory-news">
+            <div className="content">
+              <RegulatoryNews />
+            </div>
+          </Route>
+          <Route path="/advisers">
+            <div className="content">
+              <Advisers />
+            </div>
+          </Route>
+          <Route path="/investors">
+            <div className="content">
+              <Investors />
+            </div>
+          </Route>
+          <Route path="/disclaimer">
+            <div className="content">
+              <Disclaimer />
+            </div>
+          </Route>
+          <Route path="/accessibility">
+            <div className="content">
+              <Accessibility />
+            </div>
+          </Route>
+          <Route path="/terms">
+            <div className="content">
+              <Terms />
+            </div>
+          </Route>
+          <Route path="/sitemap">
+            <div className="content">
+              <SiteMap />
             </div>
           </Route>
           <Route path="/">

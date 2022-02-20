@@ -18,7 +18,7 @@ export default function Milestones() {
   }, []);
 
   const tenItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2010' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -31,11 +31,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const elevItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2011' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -48,11 +48,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const twelItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2012' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -65,11 +65,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const thirItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2013' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -82,11 +82,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const fourItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2014' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -99,11 +99,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const fiftItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2015' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -116,11 +116,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const sixtItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2016' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -133,11 +133,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const sevenItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2017' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -150,11 +150,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const eightItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2018' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -167,11 +167,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const nineItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2019' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -184,11 +184,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const twenItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2020' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -201,11 +201,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const twenoneItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2021' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -218,11 +218,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const twentwoItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2022' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -235,11 +235,11 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   const twenthreeItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <div key={item.id}>
+    <React.Fragment key={item.id}>
       {item.year === '2023' ?
       <div className={item.tag === "right" ? "milestone right" : "milestone left"}>
         <div className="milestone-dot"></div>
@@ -252,7 +252,7 @@ export default function Milestones() {
         </div>
       </div>
       : null }
-    </div>
+    </React.Fragment>
   );
 
   return (

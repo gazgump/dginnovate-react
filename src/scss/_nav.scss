@@ -1,4 +1,6 @@
 .navbar {
+  display: flex;
+  align-items: center;
   background: transparent;
   .navbar-burger {
     width: 5.25rem;
@@ -18,23 +20,28 @@
       }
     }
   }
+  .navbar-brand {
+    justify-content: space-between;
+    align-items: center;
+    @media ( max-width: 1023px ) {
+      width: 100%;
+    }
+  }
   .navbar-item {
     background: black;
     color: $white;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    height: 70px;
     span {
       padding: 0.5rem 1.2rem;
     }
     &:hover, &:focus {
-      color: darken($white, 20%);
-      background: darken($primary-color, 20%);
-      @media ( min-width: 1024px ) {
-        background: $black;
-      }
+      color: $black;
+      background: $primary-color;
       span {
-        background: darken($primary-color, 20%);
+        background: $primary-color;
         @media ( min-width: 1024px ) {
-          background: darken($primary-color, 20%);
+          background: $primary-color;
           border-radius: 1rem;
         }
       }
@@ -46,7 +53,24 @@
       background: $black;
     }
     @media ( max-width: 1023px ) {
-      background: darken($primary-color, 20%);
+      background: $primary-color;
+    }
+    .arrow-down {
+      background: url("../assets/images/down-arrow-white.svg");
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 5px;
+      &:after {
+        content: "";
+      }
+    }
+    &:hover, &:focus {
+      .arrow-down {
+        background: url("../assets/images/down-arrow.svg");
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 5px;
+      }
     }
   }
   .navbar-menu {
@@ -54,7 +78,7 @@
     display: none;
     width: 100%;
     background: $black;
-    padding: 2rem 0;
+    padding: 0;
     top: 0;
     bottom: 0;
     height: 100vh;
@@ -70,6 +94,19 @@
       font-size: 1rem;
       .navbar-start {
         justify-content: flex-end;
+        .level2 {
+          display: none;
+        }
+        .level1 {
+          display: flex;
+          flex-direction: row;
+          &:hover {
+            .level2 {
+              display: flex;
+            }
+          }
+        }
+
       }
       .navbar-item {
         padding: 0;
@@ -92,11 +129,101 @@
 
 @media ( max-width: 1023px ) {
   .modal-background {
-    background: darken($primary-color, 20%);
+    background: $primary-color;
   }
   .modal-content {
-    background: darken($primary-color, 20%);
+    background: $primary-color;
     text-align: center;
     font-size: 1.2rem;
+  }
+}
+
+.arrow-down {
+  @media ( max-width: 1023px ) {
+    display: none!important;
+  }
+}
+
+.mm-spn {
+  li {
+    &:before {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+@media ( min-width: 1024px ) {
+  nav {
+    .has-children {
+      &.investors {
+        ul {
+          li {
+            a {
+              width: 230px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav ul {
+    background-color:#444;
+    display:flex;
+    flex-direction:column;
+  }
+  nav ul li{
+    list-style-type: none;
+  }
+  nav ul li a{
+    padding:.8rem 1rem;
+    display:block;
+    text-decoration: none;
+    color:#f9f9f9;
+  }
+  nav ul li:hover{
+    background:rgba(0,0,0, .25);
+  }
+
+  .arrow{
+    font-family:FontAwesome;
+    float:right;
+  }
+
+  @media only screen and (max-width:480px){
+    .has-children ul li a{
+      padding-left:2rem;
+    }
+
+    .has-children ul .has-children ul a{
+      padding-left:3rem;
+    }
+
+  }
+
+  @media only screen and (min-width:480px){
+    nav ul{
+      flex-direction:row;
+  /*     justify-content:flex-end; */
+    }
+    nav ul li{
+      position:relative;
+      flex:1 0 auto;
+      text-align:left;
+    }
+    .has-children ul, .has-children ul .has-children ul{
+      display:none;
+      width:100%;
+      position:absolute;
+    }
+    .has-children ul .has-children ul{
+      left:100%;
+      top:0;
+    }
+    nav ul li:hover ul,  .has-children ul .has-children:hover ul{
+       display:flex;
+      flex-direction:column;
+    }
+
   }
 }

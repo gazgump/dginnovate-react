@@ -95,21 +95,21 @@ export default function Contact() {
                 <h4>General Enquiries Please Contact</h4>
                 <div className="email-address">
                   <img className="icon icon-envelope" src="envelope.svg" alt=""/>
-                  <a href="mailto:general@deregallera.com" className="email-link">{data.general}</a>
+                  <a href="mailto:gen-enq-dgi@dginnovate.com" className="email-link">{data.general}</a>
                 </div>
               </div>
               <div className="email-block">
                 <h4>Press Enquiries Please Contact</h4>
                 <div className="email-address">
                   <img className="icon icon-envelope" src="envelope.svg" alt=""/>
-                  <a href="mailto:press@deregallera.com" className="email-link">{data.press}</a>
+                  <a href="mailto:pub-rel@dginnovate.com" className="email-link">{data.press}</a>
                 </div>
               </div>
               <div className="email-block">
                 <h4>Investor Enquiries Please Contact</h4>
                 <div className="email-address">
                   <img className="icon icon-envelope" src="envelope.svg" alt=""/>
-                  <a href="mailto:investor@deregallera.com" className="email-link">{data.investor}</a>
+                  <a href="mailto:invest-in-dgi@dginnovate.com" className="email-link">{data.investor}</a>
                 </div>
               </div>
             </div>

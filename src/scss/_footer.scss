@@ -1,9 +1,11 @@
 .footer {
   background: $black;
   color: $white;
+  @media (max-width: 1023px) {
+    text-align: center;
+  }
   ul {
     li {
-      list-style: disc;
       @media (max-width: 1023px) {
         list-style: none;
       }
@@ -27,6 +29,9 @@
   }
   .nav-item {
     margin-bottom: 1.2rem;
+    &.Home {
+      display: none;
+    }
   }
   .news-article {
     margin-bottom: 1rem;
@@ -40,5 +45,32 @@
   }
   .copyright {
     margin-top: 1rem;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
+    li {
+      &:last-child {
+        .footer-item {
+          border-right: none;
+        }
+      }
+    }
+    .footer-item {
+      list-style: none;
+      display: inline-block;
+      border-right: 1px solid $white;
+      padding: 0 5rem 0 0;
+      @media (max-width: 1023px) {
+        margin-bottom: 0.5rem;
+        border: none;
+        padding: 0;
+      }
+    }
   }
 }

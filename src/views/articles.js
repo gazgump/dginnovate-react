@@ -37,7 +37,7 @@ export default function Articles() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com';
+  const url = 'https://dginnovate.herokuapp.com';
 
   let { id } = useParams();
 
