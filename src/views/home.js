@@ -8,6 +8,10 @@ import FadeIn from '../shared/fadein';
 
 export default function Home() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
   const [newsData, setNews] = useState([]);
 
@@ -40,22 +44,21 @@ export default function Home() {
           <div className="text">{item.name}</div>
           <a href={"/articles/" + item.slug}><button className="button primary inverted">Read more</button></a>
         </div>
-
       </div>
     </div>
   );
 
   return (
     <div>
-    <FadeIn delay={200} duration={1200}>
+    <FadeIn delay={800} duration={1200}>
       <div className="container">
         <div className="studio-blurb">
-          { data.blurb }
+          <div dangerouslySetInnerHTML={{__html: data.blurb }}></div>
         </div>
       </div>
 
       <div className="video-container">
-        <video src="https://res.cloudinary.com/deregallera/video/upload/v1616767675/bgvideo.mp4" poster="https://res.cloudinary.com/deregallera/image/upload/v1615480297/Particles-image.png" playsInline autoPlay muted loop></video>
+        <video src="dgiplc-bg.mp4" poster="https://res.cloudinary.com/deregallera/image/upload/v1649496213/greenbg.jpg" playsInline autoPlay muted loop></video>
         <div dangerouslySetInnerHTML={{__html: data.mission }}></div>
       </div>
 
@@ -67,16 +70,24 @@ export default function Home() {
 
           <div className="columns">
             <div className="column">
-              <img src={data.image1} alt=''/>
+              <a href="https://www.southampton.ac.uk/" target="_blank" rel="noreferrer">
+                <img src={data.image1} alt='University of Southampton'/>
+              </a>
             </div>
             <div className="column">
-              <img src={data.image2} alt=''/>
+              <a href="https://www.cam.ac.uk/" target="_blank" rel="noreferrer">
+                <img src={data.image2} alt='University of Cambridge'/>
+              </a>
             </div>
             <div className="column">
-              <img src={data.image3} alt=''/>
+              <a href="https://www.exeter.ac.uk/" target="_blank" rel="noreferrer">
+                <img src={data.image3} alt='University of Exeter'/>
+              </a>
             </div>
           </div>
-          <Link to="/partners" className="button primary">See all of our partners</Link>
+        </div>
+        <div className="partner-button-holder">
+          <Link to="/partners" className="button primary partner-button">See all of our partners</Link>
         </div>
       </div>
       <div className="latest-news-section">
@@ -87,6 +98,22 @@ export default function Home() {
         </div>
       </div>
       <div className="container">
+
+        <div className="container">
+          <div className="columns">
+            <div className="column large-6">
+              <div className="box-container">
+                <div className="green-box">
+                  <div dangerouslySetInnerHTML={{__html: data.leftlist }}></div>
+                </div>
+                <div className="grey-box">
+                  <div dangerouslySetInnerHTML={{__html: data.rightlist }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="bottom-text">
           { data.bottomtext }
         </div>

@@ -11,7 +11,7 @@
       height: 2px;
       width: 26px;
       left: calc(50% - 10px);
-      color: $white;
+      color: $black;
       &:nth-child(1) {
         top: calc(50% - 12px);
       }
@@ -28,15 +28,15 @@
     }
   }
   .navbar-item {
-    background: black;
-    color: $white;
+    background: $light-grey;
+    color: $black;
     text-transform: capitalize;
     height: 70px;
     span {
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1rem;
     }
     &:hover, &:focus {
-      color: $black;
+      color: $light-grey;
       background: $primary-color;
       span {
         background: $primary-color;
@@ -50,13 +50,13 @@
       max-height: none;
     }
     &.logo {
-      background: $black;
+      background: $light-grey;
     }
     @media ( max-width: 1023px ) {
       background: $primary-color;
     }
     .arrow-down {
-      background: url("../assets/images/down-arrow-white.svg");
+      background: url("../assets/images/down-arrow.svg");
       background-repeat: no-repeat;
       width: 5px;
       height: 5px;
@@ -66,7 +66,7 @@
     }
     &:hover, &:focus {
       .arrow-down {
-        background: url("../assets/images/down-arrow.svg");
+        background: url("../assets/images/down-arrow-white.svg");
         background-repeat: no-repeat;
         width: 5px;
         height: 5px;
@@ -77,7 +77,7 @@
     position: absolute;
     display: none;
     width: 100%;
-    background: $black;
+    background: $light-grey;
     padding: 0;
     top: 0;
     bottom: 0;
@@ -112,29 +112,20 @@
         padding: 0;
         &.logo {
           padding: 0rem 0.75rem 0.5rem;
-          background: $black;
+          background: $light-grey;
         }
       }
+    }
+    .ticker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $light-grey;
+      padding: 0 0 0 1rem;
     }
   }
   .privacy, .partners {
     display: none;
-  }
-}
-@media ( min-width: 1024px ) {
-  .modal {
-    display: none!important;
-  }
-}
-
-@media ( max-width: 1023px ) {
-  .modal-background {
-    background: $primary-color;
-  }
-  .modal-content {
-    background: $primary-color;
-    text-align: center;
-    font-size: 1.2rem;
   }
 }
 

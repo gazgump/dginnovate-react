@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
+import Milestones from './milestones';
 import FadeIn from '../shared/fadein';
 
 export default function History() {
@@ -27,6 +28,7 @@ export default function History() {
       <div className="history-section">
         <div dangerouslySetInnerHTML={{__html: data.content }}></div>
       </div>
+      <Milestones />
       </FadeIn>
       </div>
     </div>

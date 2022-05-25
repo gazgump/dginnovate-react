@@ -5,6 +5,10 @@ import FadeIn from '../shared/fadein';
 
 export default function Terms() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';

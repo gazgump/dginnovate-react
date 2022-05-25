@@ -38,6 +38,12 @@
   }
 }
 
+
+.investor-car-image {
+  margin: 2.5rem 0;
+}
+
+
 .partner {
   padding: 5rem 0;
   border-bottom: 2px solid $primary-color;
@@ -112,6 +118,15 @@
   }
 }
 
+.shareprice-loader {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact {
   .contact-blurb {
     margin-bottom: 2rem;
@@ -162,5 +177,15 @@
   }
   .map {
     margin-top: 2rem;
+  }
+}
+
+.sitemap {
+  ul {
+    li {
+      a {
+        color: $primary-color;
+      }
+    }
   }
 }

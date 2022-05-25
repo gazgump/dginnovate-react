@@ -1,0 +1,47 @@
+.directors-section {
+  .card-button {
+    border: none;
+    width: 100%;
+    background: $light-grey;
+    color: $black;
+    padding: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: normal;
+    border: 1px solid $grey;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .director {
+    background: $light-grey;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    min-height: 430px;
+    width: 100%;
+    .director-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $black;
+    }
+    .director-jobtitle {
+      font-size: 1rem;
+      color: $black;
+    }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border-radius: 0.3rem;
+      .director-image {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 0.3rem;
+        transition: transform .25s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

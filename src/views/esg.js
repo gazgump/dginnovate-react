@@ -5,6 +5,10 @@ import FadeIn from '../shared/fadein';
 
 export default function Esg() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
@@ -23,7 +27,7 @@ export default function Esg() {
     <div className="container">
       <div className="esg">
       <FadeIn delay={200} duration={1200}>
-      <h1>Esg</h1>
+      <h1>ESG</h1>
       <div className="esg-section">
         <div dangerouslySetInnerHTML={{__html: data.content }}></div>
       </div>

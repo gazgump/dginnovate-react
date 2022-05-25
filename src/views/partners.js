@@ -5,6 +5,10 @@ import FadeIn from '../shared/fadein';
 
 export default function Partners() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
@@ -23,10 +27,14 @@ export default function Partners() {
     <div className="partner">
       <div className="columns">
         <div className="column is-full-mobile is-one-fifth">
-          <img src={item.image} alt={ item.title }/>
+          <a href={ item.link } target="_blank" rel="noreferrer">
+            <img src={item.image} alt={ item.title }/>
+          </a>
         </div>
         <div className="column is-full-mobile is-four-fifths">
-          <h3 className="partner-title">{ item.title }</h3>
+          <a href={ item.link } target="_blank" rel="noreferrer">
+            <h3 className="partner-title">{ item.title }</h3>
+          </a>
           <div className="partner-blurb">
             { item.description }
           </div>

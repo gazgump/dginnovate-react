@@ -3,6 +3,10 @@ import axios from 'axios';
 
 export default function Vacancies() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';

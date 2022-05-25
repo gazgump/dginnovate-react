@@ -62,10 +62,6 @@ export default function Contact() {
           <div className="columns">
             <div className="column is-full-mobile is-half">
             <h2 className="contact-subtitle">Get in Touch</h2>
-            <img className="icon icon-phone" src="phone.svg" alt="phone icon"/>
-            <div className="contact-number">
-              {data.phone}
-            </div>
             <div className="address">
               {data.address}
             </div>
@@ -92,6 +88,13 @@ export default function Contact() {
             </div>
             <div className="column is-full-mobile is-half">
               <div className="email-block">
+                <h4>c/o IFC Advisory</h4>
+                <div className="email-address">
+                  <img className="icon icon-envelope" src="envelope.svg" alt=""/>
+                  <a href="mailto:dginnovate@investor-focus.co.uk" className="email-link">{data.ifc}</a>
+                </div>
+              </div>
+              <div className="email-block">
                 <h4>General Enquiries Please Contact</h4>
                 <div className="email-address">
                   <img className="icon icon-envelope" src="envelope.svg" alt=""/>
@@ -114,9 +117,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9915.649415438393!2d-3.2239862!3d51.5881697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5212e91481a5088d!2sDeregallera+Ltd!5e0!3m2!1sen!2suk!4v1562751645021!5m2!1sen!2suk" title="map" width="100%" height="450" allowFullScreen="" loading="lazy"></iframe>
         </div>
       </FadeIn>
       </div>

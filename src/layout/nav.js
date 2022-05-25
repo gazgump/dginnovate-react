@@ -34,7 +34,6 @@ export default function Nav() {
                 <span className="arrow arrow-down"></span>
                 </Link>
                  <ul>
-                  <li><Link className="overview navbar-item" to='/overview' onClick={() => setShowMenu(!showMenu)}><span>Overview</span></Link></li>
                   <li><Link className="history navbar-item" to='/history' onClick={() => setShowMenu(!showMenu)}><span>History</span></Link></li>
                   <li><Link className="esg navbar-item" to='/esg' onClick={() => setShowMenu(!showMenu)}><span>ESG</span></Link></li>
                 </ul>
@@ -44,6 +43,8 @@ export default function Nav() {
                 <span className="arrow arrow-down"></span>
                 </Link>
                  <ul>
+                  <li><Link className="ebt navbar-item" to='/enhanced-battery-technology' onClick={() => setShowMenu(!showMenu)}><span>EBT</span></Link></li>
+                  <li><Link className="edt navbar-item" to='/enhanced-drive-technology' onClick={() => setShowMenu(!showMenu)}><span>EDT</span></Link></li>
                   <li><Link className="facilities navbar-item" to='/facilities' onClick={() => setShowMenu(!showMenu)}><span>Facilities</span></Link></li>
                 </ul>
               </li>
@@ -55,18 +56,16 @@ export default function Nav() {
                   <li><Link className="shareprice navbar-item" to='/share-price' onClick={() => setShowMenu(!showMenu)}><span>Share Price</span></Link></li>
                   <li><Link className="regulatorynews navbar-item" to='/regulatory-news' onClick={() => setShowMenu(!showMenu)}><span>Regulatory News</span></Link></li>
                   <li><Link className="reports navbar-item" to='/reports-documents' onClick={() => setShowMenu(!showMenu)}><span>Reports &amp; Documents</span></Link></li>
-                  <li><Link className="directors navbar-item" to='/team' onClick={() => setShowMenu(!showMenu)}><span>Directors</span></Link></li>
+                  <li><Link className="directors navbar-item" to='/directors' onClick={() => setShowMenu(!showMenu)}><span>Directors</span></Link></li>
                   <li><Link className="advisers navbar-item" to='/advisers' onClick={() => setShowMenu(!showMenu)}><span>Advisers</span></Link></li>
                 </ul>
               </li>
               <li><Link className="news navbar-item" to='/news' onClick={() => setShowMenu(!showMenu)}><span>News</span></Link></li>
-              <li className="has-children">
-                <Link className="contact navbar-item" to='/contact' onClick={() => setShowMenu(!showMenu)}><span>Contact us</span>
-                <span className="arrow arrow-down"></span>
-                </Link>
-                 <ul>
-                  <li><Link className="join navbar-item" to='/jobs' onClick={() => setShowMenu(!showMenu)}><span>Careers</span></Link></li>
-                </ul>
+              <li>
+                <Link className="contact navbar-item" to='/contact' onClick={() => setShowMenu(!showMenu)}><span>Contact us</span></Link>
+              </li>
+              <li className="ticker is-hidden-touch">
+                <iframe id="SharePriceTicker" title="share ticker" width="100%" height="19px" className="responsive" src="https://irs.tools.investis.com/clients/uk/dginnovate_plc/ticker/ticker.aspx?culture=en-GB" ></iframe>
               </li>
             </ul>
           </nav>

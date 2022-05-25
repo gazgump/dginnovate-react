@@ -5,6 +5,10 @@ import FadeIn from '../shared/fadein';
 
 export default function RegulatoryNews() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
@@ -27,6 +31,7 @@ export default function RegulatoryNews() {
       <div className="regulatorynews-section">
         <div dangerouslySetInnerHTML={{__html: data.content }}></div>
       </div>
+      <iframe id="RegNewsIframe" title="regulatory news" width="100%" height="1170" className="responsive" src="https://otp.tools.investis.com/clients/uk/dg_innovate/rns/regulatory-news.aspx?culture=en-GB" ></iframe>
       </FadeIn>
       </div>
     </div>

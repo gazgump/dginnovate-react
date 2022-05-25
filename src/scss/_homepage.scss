@@ -8,9 +8,9 @@
   width: 80%;
   line-height: 40px;
   @media ( min-width: 1024px ) {
-    padding: 3rem 0 5rem;
-    font-size: 28px;
-    width: 60%;
+    padding: 2rem 0 4rem;
+    font-size: 26px;
+    width: 70%;
   }
 }
 
@@ -25,6 +25,9 @@
     height: 400px;
     width: 100%;
     object-fit: cover;
+    @media ( max-width: 768px ) {
+      object-position: right;
+    }
   }
 }
 
@@ -69,12 +72,24 @@
 }
 
 .squiggle {
-  background: url("../assets/images/squiggle.png");
+  background: url("../assets/images/squiggle.svg");
   width: 70px;
-  height: 10px;
+  height: 16px;
   background-position: center;
   background-size: cover;
   display: inline-block;
+}
+
+.black-squiggle {
+  background: url("../assets/images/black-squiggle.svg");
+  width: 70px;
+  height: 16px;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  @media ( max-width: 768px ) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .partners-section {
@@ -93,15 +108,25 @@
   }
 }
 
+.partner-button-holder {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
 .latest-news-section {
   position: relative;
   text-align: center;
-  background: url('https://res.cloudinary.com/deregallera/image/upload/v1616768473/greenbanner.png');
+  background-image: url('https://res.cloudinary.com/deregallera/image/upload/v1646500634/Abstract_Polka_Dot_Background_With_Small_Dots_generated.jpg');
+  background-color: $light-grey;
+  background-size: contain;
   width: 100%;
   height: auto;
   padding: 2rem 1rem;
+  border-top: 3px solid $light-grey;
+  border-bottom: 3px solid $light-grey;
   @media ( min-width: 1024px ) {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   .columns {
     @media ( min-width: 1024px ) {
@@ -115,13 +140,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba($black, 0.6);
+    background: rgba($white, 0.9);
     z-index: 0;
   }
   span {
     position: relative;
     z-index: 1;
-    color: $white;
+    color: $black;
     font-size: 25px;
     font-weight: 500;
     text-transform: uppercase;
@@ -132,14 +157,14 @@
   h2 {
     position: relative;
     z-index: 1;
-    color: $white;
+    color: $black;
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
     margin-top: 0rem!important;
     @media ( min-width: 1024px ) {
-      font-size: 85px;
+      font-size: 55px;
     }
   }
   .news-thumb {
@@ -152,6 +177,8 @@
   }
   .overlay-container {
     position: relative;
+    height: 99%;
+    line-height: 1;
     .overlay {
       position: absolute;
       bottom: 100%;
@@ -162,6 +189,10 @@
       width: 100%;
       height:0;
       transition: .5s ease;
+      @media ( max-width: 768px ) {
+        bottom: 0;
+        height: 100%;
+      }
     }
     &:hover {
       .overlay {
@@ -171,14 +202,11 @@
     }
     .text {
       color: white;
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 40%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      padding: 1rem;
+      font-size: 18px;
+      position: relative;
       text-align: left;
+      line-height: 1.2;
     }
     .button {
       position: absolute;
@@ -200,7 +228,7 @@
   font-size: 1.2rem;
   @media ( min-width: 1024px ) {
     width: 60%;
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
 }
 

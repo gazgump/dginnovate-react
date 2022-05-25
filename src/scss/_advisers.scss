@@ -1,0 +1,13 @@
+.adviser {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  &:nth-child(even) {
+    background: $light-grey;
+  }
+  .adviser-title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+  }
+}

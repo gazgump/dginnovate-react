@@ -32,29 +32,37 @@ export default function Footer() {
       <div className="container">
         <div className="columns">
           <div className="column is-full">
-            <ul className="footer-nav">
-              <li><Link className="disclaimer footer-item" to='/disclaimer'><span>Disclaimer</span></Link></li>
-              <li><Link className="privacy footer-item" to='/privacy'><span>Privacy</span></Link></li>
-              <li><Link className="accessibility footer-item" to='/accessibility'><span>Accessibility</span></Link></li>
-              <li><Link className="terms footer-item" to='/terms'><span>Terms and Conditions</span></Link></li>
-              <li><Link className="sitemap footer-item" to='/sitemap'><span>Site Map</span></Link></li>
-            </ul>
-          </div>
-          <div className="column is-full-mobile is-one-third">
-            <img src="https://res.cloudinary.com/deregallera/image/upload/v1616674670/dgi-logo.png" alt="logo" width="175" height="28"/>
-            <div className="company-address">
-              {homeData.address}
+            <div className="footer-container">
+              <img src="https://res.cloudinary.com/deregallera/image/upload/v1616674670/dgi-logo.png" alt="logo" width="175" height="28"/>
+              <ul className="footer-nav">
+                <li><Link className="disclaimer footer-item" to='/disclaimer'><span>Disclaimer</span></Link></li>
+                <li><Link className="privacy footer-item" to='/privacy'><span>Privacy</span></Link></li>
+                {/* <li><Link className="accessibility footer-item" to='/accessibility'><span>Accessibility</span></Link></li> */}
+                <li><Link className="terms footer-item" to='/terms'><span>Terms and Conditions</span></Link></li>
+                <li><Link className="sitemap footer-item" to='/sitemap'><span>Site Map</span></Link></li>
+              </ul>
             </div>
           </div>
+          { homeData.address ?
+          <div className="column is-full-mobile is-one-third">
+            <div className="company-address">
+              { homeData.address }
+            </div>
+          </div>
+          : null }
+          { homeData.company ?
           <div className="column is-full-mobile is-one-third">
             <div className="company-number">
-              {homeData.company}
+              { homeData.company }
             </div>
           </div>
+          : null }
+          { homeData.bsi ?
           <div className="column is-full-mobile is-one-third">
-            <img src={homeData.bsi} alt={homeData.bsi}/>
-            <p className="copyright">{homeData.copyright}</p>
+            <img src={ homeData.bsi } alt={ homeData.bsi }/>
+            <p className="copyright">{ homeData.copyright }</p>
           </div>
+          : null }
         </div>
       </div>
     </footer>

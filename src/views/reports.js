@@ -5,6 +5,10 @@ import FadeIn from '../shared/fadein';
 
 export default function Reports() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
@@ -27,6 +31,7 @@ export default function Reports() {
       <div className="reports-section">
         <div dangerouslySetInnerHTML={{__html: data.content }}></div>
       </div>
+      <iframe id="inv-alerts-tool" title="inv-alerts-tool" width="100%" height="800px" className="responsive" src="https://otp.tools.investis.com/clients/uk/dg_innovate/cas/default.aspx?culture=en-GB" data-alerts-tool-url="https://otp.tools.investis.com/clients/uk/dg_innovate/cas/default.aspx?culture=en-GB"></iframe>
       </FadeIn>
       </div>
     </div>

@@ -11,6 +11,8 @@ import {
 import Home from './views/home';
 import About from './views/about';
 import Esg from './views/esg';
+import Ebt from './views/ebt';
+import Edt from './views/edt';
 import Overview from './views/overview';
 import History from './views/history';
 import SharePrice from './views/shareprice';
@@ -21,9 +23,10 @@ import Accessibility from './views/accessibility';
 import Terms from './views/terms';
 import SiteMap from './views/sitemap';
 import RegulatoryNews from './views/regulatorynews';
-import Advisers from './views/advisers';
+import AdviserPage from './views/adviserpage';
+import DirectorsPage from './views/directorspage';
 import Team from './views/team';
-import News from './views/news';
+import NewsPage from './views/newspage';
 import Facilities from './views/facilities';
 import Technologies from './views/technologies';
 import Contact from './views/contact';
@@ -66,6 +69,16 @@ export default function App() {
               <Facilities />
             </div>
           </Route>
+          <Route path="/enhanced-battery-technology">
+            <div className="content">
+              <Ebt />
+            </div>
+          </Route>
+          <Route path="/enhanced-drive-technology">
+            <div className="content">
+              <Edt />
+            </div>
+          </Route>
           <Route path="/technologies">
             <div className="content">
               <Technologies />
@@ -73,7 +86,7 @@ export default function App() {
           </Route>
           <Route path="/news">
             <div className="content">
-              <News />
+              <NewsPage />
             </div>
           </Route>
           <Route path="/articles/:id">
@@ -123,7 +136,12 @@ export default function App() {
           </Route>
           <Route path="/advisers">
             <div className="content">
-              <Advisers />
+              <AdviserPage />
+            </div>
+          </Route>
+          <Route path="/directors">
+            <div className="content">
+              <DirectorsPage />
             </div>
           </Route>
           <Route path="/investors">

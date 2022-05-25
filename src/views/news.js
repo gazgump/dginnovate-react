@@ -6,6 +6,10 @@ import FadeIn from '../shared/fadein';
 
 export default function News() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [data, setData] = useState([]);
 
   const url = 'https://dginnovate.herokuapp.com/';
@@ -42,7 +46,6 @@ export default function News() {
   return (
     <div className="container">
       <FadeIn delay={200} duration={1200}>
-      <h1>News</h1>
       <div className="news-section">
         <div className="columns">
           {listItems}
